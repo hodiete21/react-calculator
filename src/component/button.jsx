@@ -1,47 +1,161 @@
 import React from "react";
 
-const Button = ({ capture, clearResults, setOperand, results, onClick }) => {
+const Button = ({
+  capture,
+  clearResults,
+  setOperand,
+  results,
+  onkeypress,
+  onkeyup
+}) => {
   return (
     <div className="buttons">
       <div className="row">
-        <button onClick={clearResults}>C</button>
-        <button onClick={() => capture(0)}>0</button>
-        <button onClick={() => capture(1)}>1</button>
-        <button className="operator" onClick={() => setOperand("divide")}>
+        <button
+          onKeyUp={onkeyup}
+          onKeyPress={onkeypress}
+          onClick={clearResults}
+        >
+          C
+        </button>
+        <button
+          onKeyUp={onkeyup}
+          onKeyPress={onkeypress}
+          onClick={() => capture(0)}
+        >
+          0
+        </button>
+        <button
+          onKeyUp={onkeyup}
+          onKeyPress={onkeypress}
+          onClick={() => capture(1)}
+        >
+          1
+        </button>
+        <button
+          className="operator"
+          onKeyUp={onkeyup}
+          onKeyPress={onkeypress}
+          onClick={() => setOperand("/")}
+        >
           ÷
         </button>
       </div>
       <div className="row">
-        <button onClick={() => capture(2)}>2</button>
-        <button onClick={() => capture(3)}>3</button>
-        <button onClick={() => capture(4)}>4</button>
-        <button className="operator" onClick={() => setOperand("subtract")}>
+        <button
+          onKeyUp={onkeyup}
+          onKeyPress={onkeypress}
+          onClick={() => capture(2)}
+        >
+          2
+        </button>
+        <button
+          onKeyUp={onkeyup}
+          onKeyPress={onkeypress}
+          onClick={() => capture(3)}
+        >
+          3
+        </button>
+        <button
+          onKeyUp={onkeyup}
+          onKeyPress={onkeypress}
+          onClick={() => capture(4)}
+        >
+          4
+        </button>
+        <button
+          className="operator"
+          onKeyUp={onkeyup}
+          onKeyPress={onkeypress}
+          onClick={() => setOperand("-")}
+        >
           -
         </button>
       </div>
       <div className="row">
-        <button onClick={() => capture(5)}>5</button>
+        <button
+          onKeyUp={onkeyup}
+          onKeyPress={onkeypress}
+          onClick={() => capture(5)}
+        >
+          5
+        </button>
 
-        <button onClick={() => capture(6)}>6</button>
-        <button onClick={() => capture(7)}>7</button>
-        <button className="operator" onClick={() => setOperand("multiply")}>
+        <button
+          onKeyUp={onkeyup}
+          onKeyPress={onkeypress}
+          onClick={() => capture(6)}
+        >
+          6
+        </button>
+        <button
+          onKeyUp={onkeyup}
+          onKeyPress={onkeypress}
+          onClick={() => capture(7)}
+        >
+          7
+        </button>
+        <button
+          className="operator"
+          onKeyUp={onkeyup}
+          onKeyPress={onkeypress}
+          onClick={() => setOperand("*")}
+        >
           x
         </button>
       </div>
       <div className="row">
-        <button onClick={() => capture(8)}>8</button>
-        <button onClick={() => capture(9)}>9</button>
-        <button onClick={() => capture(".")}>.</button>
-        <button className="operator" onClick={() => setOperand("add")}>
+        <button
+          onKeyUp={onkeyup}
+          onKeyPress={onkeypress}
+          onClick={() => capture(8)}
+        >
+          8
+        </button>
+        <button
+          onKeyUp={onkeyup}
+          onKeyPress={onkeypress}
+          onClick={() => capture(9)}
+        >
+          9
+        </button>
+        <button
+          onKeyUp={onkeyup}
+          onKeyPress={onkeypress}
+          onClick={() => capture(".")}
+        >
+          .
+        </button>
+        <button
+          className="operator"
+          onKeyUp={onkeyup}
+          onKeyPress={onkeypress}
+          onClick={() => setOperand("+")}
+        >
           +
         </button>
-        <button className="operator" onClick={() => setOperand("percent")}>
+        <button
+          className="operator"
+          onKeyUp={onkeyup}
+          onKeyPress={onkeypress}
+          onClick={() => setOperand("%")}
+        >
           %
         </button>
-        <button className="operator" onClick={() => setOperand("negate")}>
+        <button
+          className="operator"
+          onKeyUp={onkeyup}
+          onKeyPress={onkeypress}
+          onClick={() => setOperand("negate")}
+        >
           ±
         </button>
-        <button className="operator" onClick={() => results()}>
+        <button
+          className="operator"
+          onKeyUp={onkeyup}
+          onKeyPress={onkeypress}
+          onClick={() => results()}
+        >
           =
         </button>
       </div>
